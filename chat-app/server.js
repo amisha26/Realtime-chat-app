@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // run when a client connects
 io.on('connection', socket => {
+    // welcome current user
     socket.emit('message', 'Welcome to chatcord');
 
     // broadcast when a user connects
